@@ -50,7 +50,7 @@
             /* Hero Section */
             .hero {
                 height: 80vh;
-                background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url(/images/Daft\ Punk\ Interstella\ 5555.jpeg);
+                background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url(/images/38b7d5bf446576224bf7b3efc81b5593.jpg);
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -61,6 +61,8 @@
             }
     
             .hero-content {
+                position: relative;
+                top: 25%;
                 max-width: 600px;
             }
     
