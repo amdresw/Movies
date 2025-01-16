@@ -21,8 +21,60 @@
                 background: rgba(0, 0, 0, 0.5);
                 position: fixed;
                 width: 100%;
-                z-index: 100;
+                z-index: 10;
             }
+            .search-bar {
+                display: flex;
+                align-items: center;
+                margin: 16px 0;
+                padding: 10px;
+                border-radius: 8px;
+                background-color: rgba(255, 255, 255, 0.7);
+                
+            }
+            
+            .search-bar input {
+                flex: 1;
+                border: none;
+                background: transparent;
+                outline: none;
+                padding: 8px;
+            }
+            
+            .search-bar i {
+                font-size: 20px;
+                color: #888;
+            }
+            
+            .results {
+                display: none; /* Oculto por defecto */
+                position: absolute;
+                top: 220px;
+                width: 90%;
+                max-height: 150px;
+                overflow-y: auto;
+                background: rgba(255, 255, 255, 0.3); /* Fondo blanco semitransparente */
+                backdrop-filter: blur(10px); /* Aplica el difuminado al fondo */
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+                padding: 8px 0;
+            }
+            .results.show {
+                display: block; /* Muestra el menú cuando tiene la clase "show" */
+            }
+            
+            .results li {
+                padding: 10px;
+                list-style: none;
+                cursor: pointer;
+            }
+            
+            .results li:hover {
+                background-color: #f0f0f0;
+            }
+            
     
             .logo {
                 width: 120px;
@@ -50,7 +102,7 @@
             /* Hero Section */
             .hero {
                 height: 80vh;
-                background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url(/images/38b7d5bf446576224bf7b3efc81b5593.jpg);
+                background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url(/images/5555.jpg);
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
