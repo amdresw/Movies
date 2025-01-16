@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>IMAGINATION Cinema</title>
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/popup.css">
         
     </head>
     <body>
@@ -32,6 +33,17 @@
                 <a href="#book" class="book-now">Book Now</a>
             </div>
         </section>
+
+        <div id="popup" class="hidden">
+            <div id="popup-content">
+                <button class="close-btn" id="close-popup"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32"><path fill="ff3b3b" d="M16 2C8.2 2 2 8.2 2 16s6.2 14 14 14s14-6.2 14-14S23.8 2 16 2m5.4 21L16 17.6L10.6 23L9 21.4l5.4-5.4L9 10.6L10.6 9l5.4 5.4L21.4 9l1.6 1.6l-5.4 5.4l5.4 5.4z"/></svg></button>
+                <img id="popup-image" src="" alt="Movie Poster" />
+                <h2 id="popup-title"></h2>
+                <p id="popup-summary"></p>
+                <p>Cast:</p><ul id="popup-cast"></ul>
+                <p id="popup-duration"></p>
+            </div>
+        </div>
     
         <section class="categories">
             <h2 class="section-title">Opening This Week</h2>
@@ -41,158 +53,15 @@
                 <button class="category-btn">3D</button>
                 <button class="category-btn">IMAX</button>
             </div>
+
             <div class="movie-grid">
                 <!-- Movie cards would be dynamically generated -->
-                <div class="movie-card">
-                    <img src="/images/5555.jpg" alt="Interstella 5555">
-                    <div class="movie-info">
-                        <h3>Interstella 5555</h3>
-                        <p>Animated</p>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="/images/RP1.jpg" alt="Ready Player One">
-                    <div class="movie-info">
-                        <h3>Ready Player One</h3>
-                        <p>Sci-Fi</p>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="/images/batman2.jpg" alt="The Batman">
-                    <div class="movie-info">
-                        <h3>The Batman</h3>
-                        <p>Action</p>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="/images/shiny.jpg" alt="The Shining">
-                    <div class="movie-info">
-                        <h3>The Shining</h3>
-                        <p>Horror</p>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="/images/howl.jpg" alt="howl´s moving casttle">
-                    <div class="movie-info">
-                        <h3>Howl´s Moving Casttle</h3>
-                        <p>Animated</p>
-                    </div>  
-                </div>
-                <div class="movie-card">
-                    <img src="/images/D.jango.jpg" alt="Django Unchained">
-                    <div class="movie-info">
-                        <h3>Django Unchained</h3>
-                        <p>Action</p>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="/images/matrix.jpg" alt="The Matrix">
-                    <div class="movie-info">
-                        <h3>The Matrix</h3>
-                        <p>Sci-Fi</p>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="/images/here.jpg" alt="Hereditary">
-                    <div class="movie-info">
-                        <h3>Hereditary</h3>
-                        <p>Horror</p>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="/images/Ur name.jpg" alt="Your Name">
-                    <div class="movie-info">
-                        <h3>Your Name</h3>
-                        <p>Animated</p>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="/images/blade.jpg" alt="Blade Runner 2049">
-                    <div class="movie-info">
-                        <h3>Blade Runner 2049</h3>
-                        <p>Sci-Fi</p>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="/images/conju.jpg" alt="The Conjuring">
-                    <div class="movie-info">
-                        <h3>The Conjuring</h3>
-                        <p>Horror</p>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="/images/Ghost.webp" alt="Ghost in The Shell">
-                    <div class="movie-info">
-                        <h3>Ghost in The Shell</h3>
-                        <p>Animated</p>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="/images/gladiator.jpg" alt="Gladiator">
-                    <div class="movie-info">
-                        <h3>Gladiator</h3>
-                        <p>Action</p>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="/images/Baba.jpg" alt="Babadook">
-                    <div class="movie-info">
-                        <h3>Babadook</h3>
-                        <p>Horror</p>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="/images/spider-man.jpg" alt="Spider-Man: Into the Spider-Verse">
-                    <div class="movie-info">
-                        <h3>Spider-Man: Into the Spider-Verse</h3>
-                        <p>Animated</p>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="/images/wick.jpg" alt="John Wick">
-                    <div class="movie-info">
-                        <h3>John Wick</h3>
-                        <p>Action</p>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="/images/Tron.jpg" alt="Tron: Legacy">
-                    <div class="movie-info">
-                        <h3>Tron: Legacy</h3>
-                        <p>Sci-Fi</p>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="/images/exo.jpg" alt="The Exorcist">
-                    <div class="movie-info">
-                        <h3>The Exorcist</h3>
-                        <p>Horror</p>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="/images/mad_max_fury_road-459159396-large.jpg" alt="Mad Max: Fury Road">
-                    <div class="movie-info">
-                        <h3>Mad Max: Fury Road</h3>
-                        <p>Action</p>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="/images/ddune.jpg" alt="Dune">
-                    <div class="movie-info">
-                        <h3>Dune</h3>
-                        <p>Sci-Fi</p>
-                    </div>
-                </div>
-                <div class="movie-card">
-                    <img src="/images/look.jpg" alt="Don't Look Now">
-                    <div class="movie-info">
-                        <h3>Don't Look Now</h3>
-                        <p>Horror</p>
-                    </div>
-                </div>
+               
                 <!-- More movie cards... -->
             </div>
+            
         </section>
+        
     
         <footer>
             <p style="color: #ff3b3b;">Imagination Cinema</p> 
@@ -203,5 +72,7 @@
             </div>
             <p>© Imagination Cinema all right reserved</p>
         </footer>
+        <script type="module" src="js/app.js"></script>
     </body>
+    
     </html>  
