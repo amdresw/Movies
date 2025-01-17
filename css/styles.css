@@ -26,11 +26,13 @@
             .search-bar {
                 display: flex;
                 align-items: center;
-                margin: 16px 0;
                 padding: 10px;
-                border-radius: 8px;
+                gap: 10px;
+                border-radius: 5px;
                 background-color: rgba(255, 255, 255, 0.7);
-                width: 30%;
+                width: 100%;
+                max-width: 500px;
+                margin: 20px auto;
             }
             
             .search-bar input {
@@ -48,33 +50,36 @@
             
             .results {
                 display: none; /* Oculto por defecto */
-                position: absolute;
-                top: 220px;
-                width: 90%;
+                width: 100%;
+                position: fixed;
+                top: 10%;
+                right: 36%;
+                max-width: 500px;
                 max-height: 150px;
-                overflow-y: auto;
+                overflow: auto;
                 background: rgba(255, 255, 255, 0.3); /* Fondo blanco semitransparente */
                 backdrop-filter: blur(10px); /* Aplica el difuminado al fondo */
                 border: 1px solid #ddd;
                 border-radius: 8px;
                 box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-                z-index: 1000;
+                z-index: 100;
                 padding: 8px 0;
+            }
+            .result-item {
+                padding: 10px;
+                cursor: pointer;
+                border-bottom: 1px solid #ddd;
+            }
+            
+            .result-item:hover {
+                background-color: #f0f0f0;
+                color: #333;
             }
             .results.show {
                 display: block; /* Muestra el menú cuando tiene la clase "show" */
             }
             
-            .results li {
-                padding: 10px;
-                list-style: none;
-                cursor: pointer;
-            }
-            
-            .results li:hover {
-                background-color: #f0f0f0;
-            }
-            
+           
     
             .logo {
                 width: 120px;
@@ -262,6 +267,7 @@
     
             /* Responsive Design */
             @media (max-width: 768px) {
+                
                 .nav-links {
                     display: none;
                 }
@@ -269,6 +275,13 @@
                 .search-bar {
                     width: 40%;
                     height: 20%;
+                }
+                .results {
+                    top: 19%;
+                    right: 29%;
+                    width: 100%;
+                    max-width: 150px;
+                    max-height: 150px;
                 }
     
                 .hero {

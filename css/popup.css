@@ -3,7 +3,6 @@
 }
 #popup {
     width: 100%;
-    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,15 +25,15 @@
 
 }
 #popup-image{
-    width: 55%;
-    height: 45%;
+    width: 50%;
+    height: 50%;
 }
 
 .close-btn {
     background-color: #ff3b3b;
     color: white;
     border: none;
-    padding: 5px;
+    padding: 2px;
     cursor: pointer;
     border-radius: 4px;
     align-self: flex-start

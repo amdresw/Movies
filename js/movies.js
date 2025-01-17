@@ -1,7 +1,7 @@
 export const movies = [
     {
         id: 1,
-        title: "Interstellar 5555",
+        title: "Interstella 5555",
         image: "./images/5555.jpg",
         genre: "Animated",
         summary: "Is a 2003 anime musical science fiction film. The film tells the story of the abduction and rescue of an extraterrestrial pop band and serves as a visual companion to Discovery, Daft Punk's second studio album. The film was produced by Toei Animation, directed by Kazuhisa Takenouchi and supervised by Leiji Matsumoto.The film has no dialogue, but instead consists of the entirety of Discovery with minimal sound effects.",
